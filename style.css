@@ -1,0 +1,201 @@
+/* style.css */
+/* ==========================================================================
+   1. RESET E CONFIGURAÇÕES GERAIS
+   ========================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #114220;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 15px;
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   2. CABEÇALHO / PERFIL (.perfil)
+   ========================================================================== */
+
+.perfil {
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}
+
+.foto_perfil {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    margin-bottom: 12px;
+    object-fit: cover;
+}
+
+.my_name {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+}
+
+.profissao {
+    font-style: italic;
+    font-size: 0.95rem;
+    opacity: 0.9;
+    margin-bottom: 15px;
+}
+
+.links_sociais {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 18px;
+    background-color: #ffffff;
+    color: #114220;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background-color: #f0f0f0;
+}
+
+.apresentacao {
+    font-size: 0.95rem;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   3. SEÇÕES E TÍTULOS GERAIS
+   ========================================================================== */
+
+.secao_projetos, 
+.secao_descricao {
+    max-width: 500px;
+    margin: 0 auto 35px auto;
+}
+
+.titulo {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+}
+
+.subtitulo {
+    font-style: italic;
+    font-size: 0.85rem;
+    opacity: 0.85;
+    margin-bottom: 18px;
+}
+
+/* ==========================================================================
+   4. LISTA DE BOTÕES DOS PROJETOS
+   ========================================================================== */
+
+.botoes_projetos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn_projeto {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    padding: 10px 15px;
+    background-color: #ffffff;
+    color: #114220;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn_projeto:hover {
+    background-color: #e2e2e2;
+    transform: translateY(-2px);
+}
+
+.status {
+    font-size: 0.75rem;
+    font-weight: normal;
+    opacity: 0.8;
+    display: inline-block;
+    margin-left: 4px;
+}
+
+/* ==========================================================================
+   5. CARDS DE DESCRIÇÃO DOS PROJETOS
+   ========================================================================== */
+
+.card_container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.card {
+    width: 100%;
+    max-width: 350px;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 14px 16px;
+    border-radius: 8px;
+    border-left: 4px solid #ffffff;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateX(4px);
+}
+
+.card h3 {
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+}
+
+.nivel {
+    font-size: 0.8rem;
+    font-weight: bold;
+    display: block;
+    color: #a8e6cf;
+    margin-bottom: 4px;
+}
+
+.tech {
+    font-size: 0.8rem;
+    opacity: 0.9;
+}
+
+/* ==========================================================================
+   6. RODAPÉ (FOOTER)
+   ========================================================================== */
+
+footer {
+    margin-top: 40px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.direitos {
+    font-size: 0.75rem;
+    font-weight: normal;
+    opacity: 0.8;
+}
