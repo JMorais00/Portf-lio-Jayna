@@ -1,2 +1,2 @@
-# Portf-lio-Jayna
+# Portfolio-Jayna
 Acompanhe meu desenvolvimento. 
