@@ -1,19 +1,257 @@
-/* Card de projetos futuros com opacidade sutil */
+/* ==========================================================================
+   1. VARIÁVEIS DE CORES E CONFIGURAÇÃO GERAL
+   ========================================================================== */
+:root {
+  --bg-color: #0b1120;        /* Fundo principal azul-escuro/grafite */
+  --card-bg: #1e293b;         /* Fundo dos cards */
+  --card-border: #334155;     /* Borda suave dos cards */
+  --text-main: #f8fafc;       /* Texto principal claro */
+  --text-muted: #94a3b8;      /* Texto secundário/suave */
+  --accent-color: #38bdf8;    /* Azul Ciano para destaques e botões */
+  --accent-hover: #0284c7;    /* Azul escuro para efeito hover */
+  --badge-bg: rgba(56, 189, 248, 0.1); /* Fundo sutil para tags */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.6;
+  padding: 0 16px;
+}
+
+/* ==========================================================================
+   2. CABEÇALHO DO PERFIL (HERO)
+   ========================================================================== */
+.perfil {
+  text-align: center;
+  padding: 40px 16px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.foto_perfil {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent-color);
+  box-shadow: 0 8px 20px rgba(56, 189, 248, 0.2);
+  margin-bottom: 16px;
+}
+
+.my_name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.profissao {
+  color: var(--accent-color);
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+}
+
+.apresentacao {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-top: 16px;
+}
+
+.links_sociais {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.btn {
+  padding: 8px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  background-color: var(--card-bg);
+  color: var(--text-main);
+  border: 1px solid var(--card-border);
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+/* ==========================================================================
+   3. SEÇÃO DE PROJETOS & GRID RESPONSIVO
+   ========================================================================== */
+.secao_projetos {
+  max-width: 1100px;
+  margin: 40px auto 60px;
+}
+
+.titulo {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.subtitulo {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 32px;
+}
+
+/* GRID ADAPTÁVEL (CSS Grid Automático) */
+.card_container {
+  display: grid;
+  grid-template-columns: 1fr; /* Padrão: 1 coluna (Celular) */
+  gap: 20px;
+}
+
+/* ==========================================================================
+   4. CARDS DE PROJETOS
+   ========================================================================== */
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-color);
+}
+
 .card.roadmap {
-  opacity: 0.7;
+  opacity: 0.65;
 }
 
-/* Botão desativado para projetos não iniciados */
-.btn_projeto.disabled {
-  pointer-events: none;
-  opacity: 0.5;
-  cursor: not-allowed;
+.card.roadmap:hover {
+  transform: none;
+  border-color: var(--card-border);
 }
 
-/* Flexbox para o topo do card (Nível + Status) */
 .card_header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  font-size: 0.8rem;
+}
+
+.nivel {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.status {
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.75rem;
+}
+
+.status.em_andamento {
+  background-color: var(--badge-bg);
+  color: var(--accent-color);
+}
+
+.status.nao_iniciado {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--text-muted);
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+  color: var(--text-main);
+}
+
+.tech {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-bottom: 20px;
+}
+
+/* BOTÃO DE ACESSO DO CARD */
+.btn_projeto {
+  display: inline-block;
+  text-align: center;
+  padding: 10px 16px;
+  border-radius: 6px;
+  background-color: var(--accent-color);
+  color: #0b1120;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.btn_projeto:hover {
+  background-color: var(--accent-hover);
+  color: #ffffff;
+}
+
+.btn_projeto.disabled {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--text-muted);
+  cursor: not-allowed;
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   5. RODAPÉ
+   ========================================================================== */
+footer {
+  border-top: 1px solid var(--card-border);
+  padding: 24px 0;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+/* ==========================================================================
+   6. MEDIA QUERIES (MEDIAÇÃO DE TELA)
+   ========================================================================== */
+
+/* Tablets (A partir de 600px): 2 colunas */
+@media (min-width: 600px) {
+  .card_container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .foto_perfil {
+    width: 140px;
+    height: 140px;
+  }
+
+  .my_name {
+    font-size: 2.2rem;
+  }
+}
+
+/* Desktops e Monitores (A partir de 992px): 3 colunas */
+@media (min-width: 992px) {
+  .card_container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .perfil {
+    padding-top: 60px;
+  }
 }
