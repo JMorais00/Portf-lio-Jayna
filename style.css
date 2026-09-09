@@ -1,164 +1,164 @@
 /* ==========================================================================
-   1. VARIÁVEIS DE CORES E CONFIGURAÇÃO GERAL
+   1. CONFIGURAÇÕES GERAIS E RESETS BÁSICOS
    ========================================================================== */
-:root {
-  --bg-color: #0b1120;        /* Fundo principal azul-escuro/grafite */
-  --card-bg: #1e293b;         /* Fundo dos cards */
-  --card-border: #334155;     /* Borda suave dos cards */
-  --text-main: #f8fafc;       /* Texto principal claro */
-  --text-muted: #94a3b8;      /* Texto secundário/suave */
-  --accent-color: #38bdf8;    /* Azul Ciano para destaques e botões */
-  --accent-hover: #0284c7;    /* Azul escuro para efeito hover */
-  --badge-bg: rgba(56, 189, 248, 0.1); /* Fundo sutil para tags */
-}
 
+/* Zera margens e espaçamentos que os navegadores colocam por padrão */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box; /* Garante que largura e altura incluam borda e padding */
 }
 
+/* Estilos gerais do fundo e texto do site */
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  background-color: var(--bg-color);
-  color: var(--text-main);
-  line-height: 1.6;
-  padding: 0 16px;
+  font-family: 'Inter', sans-serif; /* Fonte padrão do site */
+  background-color: #0b1120;       /* Fundo escuro azulado */
+  color: #f8fafc;                  /* Cor do texto principal (branco/cinza claro) */
+  line-height: 1.6;                 /* Altura de linha para facilitar a leitura */
+  padding: 0 16px;                  /* Espaço nas laterais para não colar na tela do celular */
 }
 
 /* ==========================================================================
-   2. CABEÇALHO DO PERFIL (HERO)
+   2. CABEÇALHO DO PERFIL
    ========================================================================== */
-.perfil {
-  text-align: center;
-  padding: 40px 16px 20px;
-  max-width: 800px;
-  margin: 0 auto;
+
+/* Caixa principal que segura a foto, nome e links */
+.cabecalho {
+  text-align: center;      /* Centraliza todos os textos e imagens */
+  padding: 40px 16px 20px; /* Preenchimento: topo (40px), lados (16px), baixo (20px) */
+  max-width: 800px;        /* Largura máxima do cabeçalho */
+  margin: 0 auto;          /* Centraliza a caixa na tela */
 }
 
-.foto_perfil {
+/* Foto de perfil redonda */
+.foto-perfil {
   width: 120px;
   height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid var(--accent-color);
-  box-shadow: 0 8px 20px rgba(56, 189, 248, 0.2);
-  margin-bottom: 16px;
+  border-radius: 50%;      /* Deixa a imagem completamente redonda */
+  object-fit: cover;       /* Ajusta a imagem sem esticar */
+  border: 3px solid #38bdf8; /* Borda azul clara ao redor da foto */
+  margin-bottom: 16px;     /* Espaço abaixo da foto */
 }
 
-.my_name {
+/* Nome principal */
+.nome {
   font-size: 1.8rem;
   font-weight: 700;
   margin-bottom: 4px;
 }
 
-.profissao {
-  color: var(--accent-color);
+/* Subtítulo / Cargo */
+.cargo {
+  color: #38bdf8;          /* Cor azul em destaque */
   font-weight: 600;
   font-size: 1.1rem;
   margin-bottom: 16px;
 }
 
-.apresentacao {
-  color: var(--text-muted);
+/* Texto de apresentação */
+.descricao {
+  color: #94a3b8;          /* Texto num tom cinza mais suave */
   font-size: 0.95rem;
   margin-top: 16px;
 }
 
-.links_sociais {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
+/* Caixa com os botões das redes sociais */
+.botoes-redes {
+  display: flex;           /* Coloca os botões um ao lado do outro */
+  justify-content: center; /* Centraliza os botões no meio da tela */
+  gap: 12px;               /* Espaço entre um botão e outro */
   margin-bottom: 12px;
 }
 
-.btn {
+/* Estilo individual de cada botão social (GitHub / LinkedIn) */
+.botao {
   padding: 8px 20px;
   border-radius: 6px;
-  text-decoration: none;
+  text-decoration: none;   /* Tira o sublinhado azul padrão dos links */
   font-weight: 600;
   font-size: 0.9rem;
-  background-color: var(--card-bg);
-  color: var(--text-main);
-  border: 1px solid var(--card-border);
-  transition: all 0.2s ease;
+  background-color: #1e293b; /* Fundo cinza escuro */
+  color: #f8fafc;            /* Texto claro */
+  border: 1px solid #334155; /* Borda fina */
+  transition: 0.2s;          /* Deixa a mudança de cor suave ao passar o mouse */
 }
 
-.btn:hover {
-  border-color: var(--accent-color);
-  color: var(--accent-color);
+/* Quando passa o mouse por cima do botão social */
+.botao:hover {
+  border-color: #38bdf8;
+  color: #38bdf8;
 }
 
 /* ==========================================================================
-   3. SEÇÃO DE PROJETOS & GRID RESPONSIVO
+   3. SEÇÃO DE PROJETOS E GRID RESPONSIVO
    ========================================================================== */
-.secao_projetos {
+
+/* Container da seção inteira de projetos */
+.secao-projetos {
   max-width: 1100px;
-  margin: 40px auto 60px;
+  margin: 40px auto 60px;  /* Centraliza a seção na tela */
 }
 
-.titulo {
+/* Título principal "Meus Projetos" */
+.secao-projetos h2 {
   text-align: center;
   font-size: 1.6rem;
-  font-weight: 700;
   margin-bottom: 4px;
 }
 
-.subtitulo {
+/* Subtítulo da seção */
+.subtitulo-secao {
   text-align: center;
-  color: var(--text-muted);
+  color: #94a3b8;
   font-size: 0.95rem;
   margin-bottom: 32px;
 }
 
-/* GRID ADAPTÁVEL (CSS Grid Automático) */
-.card_container {
+/* Container do Grid: organiza os cartões lado a lado */
+.lista-projetos {
   display: grid;
-  grid-template-columns: 1fr; /* Padrão: 1 coluna (Celular) */
-  gap: 20px;
+  grid-template-columns: 1fr; /* Padrão mobile: 1 cartão por linha */
+  gap: 20px;                  /* Espaço de 20px entre cada cartão */
 }
 
 /* ==========================================================================
-   4. CARDS DE PROJETOS
+   4. CARTÕES DE PROJETOS (CARDS)
    ========================================================================== */
-.card {
-  background-color: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: 12px;
+
+/* Estilo base de cada cartão de projeto */
+.card-projeto {
+  background-color: #1e293b; /* Fundo escuro do cartão */
+  border: 1px solid #334155;   /* Borda fina discreta */
+  border-radius: 12px;        /* Bordas arredondadas */
   padding: 20px;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  flex-direction: column;     /* Organiza os textos de cima para baixo */
+  justify-content: space-between; /* Mantém o botão sempre no final do card */
+  transition: 0.2s;
 }
 
-.card:hover {
-  transform: translateY(-4px);
-  border-color: var(--accent-color);
+/* Efeito ao passar o mouse sobre o cartão */
+.card-projeto:hover {
+  transform: translateY(-4px); /* Levanta o cartão levemente */
+  border-color: #38bdf8;       /* Troca a cor da borda para azul */
 }
 
-.card.roadmap {
-  opacity: 0.65;
-}
-
-.card.roadmap:hover {
-  transform: none;
-  border-color: var(--card-border);
-}
-
-.card_header {
+/* Topo do cartão (Nível + Status) */
+.status-projeto {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Nível no canto esquerdo, status no direito */
   align-items: center;
   margin-bottom: 12px;
   font-size: 0.8rem;
 }
 
+/* Texto do nível (Iniciante, Backend, Full Stack) */
 .nivel {
-  color: var(--text-muted);
+  color: #94a3b8;
   font-weight: 500;
 }
 
+/* Tag de status (Em andamento / Em breve) */
 .status {
   padding: 2px 8px;
   border-radius: 12px;
@@ -166,92 +166,100 @@ body {
   font-size: 0.75rem;
 }
 
-.status.em_andamento {
-  background-color: var(--badge-bg);
-  color: var(--accent-color);
+/* Status: Em andamento */
+.status.em-andamento {
+  background-color: #0c4a6e; /* Fundo azul escuro */
+  color: #38bdf8;            /* Texto azul claro */
 }
 
-.status.nao_iniciado {
-  background-color: rgba(255, 255, 255, 0.05);
-  color: var(--text-muted);
+/* Status: Em breve */
+.status.em-breve {
+  background-color: #334155; /* Fundo cinza */
+  color: #94a3b8;            /* Texto cinza claro */
 }
 
-.card h3 {
+/* Título do projeto dentro do card */
+.card-projeto h3 {
   font-size: 1.2rem;
   margin-bottom: 6px;
-  color: var(--text-main);
+  color: #f8fafc;
 }
 
-.tech {
-  color: var(--text-muted);
+/* Tecnologias utilizadas */
+.tecnologias {
+  color: #94a3b8;
   font-size: 0.85rem;
   margin-bottom: 20px;
 }
 
-/* BOTÃO DE ACESSO DO CARD */
-.btn_projeto {
-  display: inline-block;
+/* Botão do card com link ativo */
+.botao-link {
+  display: block;
   text-align: center;
   padding: 10px 16px;
   border-radius: 6px;
-  background-color: var(--accent-color);
-  color: #0b1120;
+  background-color: #38bdf8; /* Azul destacado */
+  color: #0b1120;            /* Texto escuro para contraste */
   font-weight: 700;
   font-size: 0.9rem;
   text-decoration: none;
-  transition: background-color 0.2s ease;
+  transition: 0.2s;
 }
 
-.btn_projeto:hover {
-  background-color: var(--accent-hover);
+/* Mouse em cima do botão ativo */
+.botao-link:hover {
+  background-color: #0284c7; /* Azul um pouco mais escuro */
   color: #ffffff;
 }
 
-.btn_projeto.disabled {
-  background-color: rgba(255, 255, 255, 0.05);
-  color: var(--text-muted);
-  cursor: not-allowed;
+/* Botão para projetos futuros (Sem link ainda) */
+.botao-desativado {
+  display: block;
+  text-align: center;
+  padding: 10px 16px;
+  border-radius: 6px;
+  background-color: #334155;
+  color: #94a3b8;
   font-weight: 500;
+  font-size: 0.9rem;
+  cursor: not-allowed;       /* Altera o ponteiro indicando que está bloqueado */
 }
 
 /* ==========================================================================
    5. RODAPÉ
    ========================================================================== */
+
 footer {
-  border-top: 1px solid var(--card-border);
+  border-top: 1px solid #334155; /* Linha de divisão */
   padding: 24px 0;
   text-align: center;
-  color: var(--text-muted);
+  color: #94a3b8;
   font-size: 0.85rem;
 }
 
 /* ==========================================================================
-   6. MEDIA QUERIES (MEDIAÇÃO DE TELA)
+   6. RESPONSIVIDADE (ADAPTAÇÃO PARA TABLET E PC)
    ========================================================================== */
 
-/* Tablets (A partir de 600px): 2 colunas */
+/* Quando a tela for maior que 600px (Tablets) */
 @media (min-width: 600px) {
-  .card_container {
-    grid-template-columns: repeat(2, 1fr);
+  .lista-projetos {
+    grid-template-columns: repeat(2, 1fr); /* Divide em 2 colunas */
   }
-  
-  .foto_perfil {
+
+  .foto-perfil {
     width: 140px;
     height: 140px;
   }
 
-  .my_name {
+  .nome {
     font-size: 2.2rem;
   }
 }
 
-/* Desktops e Monitores (A partir de 992px): 3 colunas */
+/* Quando a tela for maior que 992px (Computadores / Notebooks) */
 @media (min-width: 992px) {
-  .card_container {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  
-  .perfil {
-    padding-top: 60px;
+  .lista-projetos {
+    grid-template-columns: repeat(3, 1fr); /* Divide em 3 colunas */
   }
 }
