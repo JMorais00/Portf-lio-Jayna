@@ -46,15 +46,6 @@ O layout foi desenvolvido com o conceito de *Responsive Design* usando *Media Qu
 
 ---
 
-## Estrutura do Projeto
-
-```text
-├── index.html   # Estrutura e conteúdo da página
-├── style.css    # Regras de estilização e layout responsivo
-└── README.md    # Documentação do repositório
-
----
-
 ## Como Rodar o Projeto Localmente
 
 Caso queira clonar e testar o projeto em sua máquina local, siga os passos abaixo:
