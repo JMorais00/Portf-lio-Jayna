@@ -1,138 +1,151 @@
+<!-- Indica para o navegador que este arquivo é um HTML5 -->
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio | Maria Jayna</title>
 
-    <!-- Google Fonts para modernizar a tipografia (opcional) -->
+<!-- Tag principal que envolve todo o site. lang="pt-BR" define o idioma como Português do Brasil -->
+<html lang="pt-BR">
+
+<head>
+    <!-- Define a acentuação correta para caracteres em português (como ç, á, é) -->
+    <meta charset="UTF-8">
+
+    <!-- Configuração para o site se ajustar à tela de celulares e tablets -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título que aparece na aba do navegador -->
+    <title>Portfólio - Maria Jayna</title>
+
+    <!-- Conexão com o Google Fonts para baixar a fonte Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Estilo CSS separado -->
+    <!-- Arquivo de CSS externo que faz a estilização e o visual da página -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 	
-  <!-- CABEÇALHO DO PERFIL -->
-  <header class="perfil">
-    <img src="https://media.licdn.com/dms/image/v2/D4D03AQHaBcl1D6Prug/profile-displayphoto-scale_400_400/B4DZ_NVrzSGYAo-/0/1785856442185?e=2147483647&v=beta&t=F4IAO2mXNapyo9uZpA4fuKz1ChKsrQSkV_OdFI1RfH8" alt="Foto de perfil de Maria Jayna" class="foto_perfil">
+  <!-- CABEÇALHO: Onde fica a foto, nome, cargo e redes sociais -->
+  <header class="cabecalho">
+    
+    <!-- Foto de perfil tirada do LinkedIn -->
+    <img src="https://media.licdn.com/dms/image/v2/D4D03AQHaBcl1D6Prug/profile-displayphoto-scale_400_400/B4DZ_NVrzSGYAo-/0/1785856442185?e=2147483647&v=beta&t=F4IAO2mXNapyo9uZpA4fuKz1ChKsrQSkV_OdFI1RfH8" alt="Foto de perfil de Maria Jayna" class="foto-perfil">
 	
-    <h1 class="my_name">Maria Jayna Morais Marques</h1>
-    <p class="profissao">Desenvolvedora Full Stack</p>
+    <!-- Nome principal do desenvolvedor -->
+    <h1 class="nome">Maria Jayna Morais Marques</h1>
+
+    <!-- Cargo/Área em que atua -->
+    <p class="cargo">Desenvolvedora Web</p>
   
-    <!-- Botões sociais com links externos -->
-    <div class="links_sociais">
-      <a href="https://github.com/JMorais00" target="_blank" rel="noopener noreferrer" class="btn">GitHub</a>
-      <a href="https://www.linkedin.com/in/maria-jayna-m-9949a110b" target="_blank" rel="noopener noreferrer" class="btn">LinkedIn</a>	
+    <!-- Caixa com os botões das redes sociais -->
+    <div class="botoes-redes">
+      <!-- Links das redes. target="_blank" faz abrir em uma nova aba -->
+      <a href="https://github.com/JMorais00" target="_blank" class="botao">GitHub</a>
+      <a href="https://www.linkedin.com/in/maria-jayna-m-9949a110b" target="_blank" class="botao">LinkedIn</a>	
     </div>
    
-    <p class="apresentacao">Acompanhe minha evolução como Desenvolvedora Full Stack através dos projetos e aplicações abaixo.</p>
+    <!-- Pequena apresentação sobre os projetos -->
+    <p class="descricao">Confira abaixo os projetos que desenvolvi ao longo do meu aprendizado em programação.</p>
   </header>
   
-  <!-- CONTEÚDO PRINCIPAL -->
+  <!-- CONTEÚDO PRINCIPAL DO SITE -->
   <main>
 
-    <!-- SEÇÃO DE CARDS UNIFICADA -->
-    <section class="secao_projetos">
-      <h2 class="titulo">Projetos & Trilha de Aprendizado</h2>
-      <p class="subtitulo">Organizados em ordem de evolução técnica</p>
+    <!-- SEÇÃO DE PROJETOS -->
+    <section class="secao-projetos">
+      
+      <!-- Título e subtítulo da seção -->
+      <h2>Meus Projetos</h2>
+      <p class="subtitulo-secao">Projetos organizados do iniciante ao avançado</p>
 		
-      <div class="card_container">
+      <!-- Container que segura todos os cartões de projetos lado a lado -->
+      <div class="lista-projetos">
 
-        <!-- Card 1 -->
-        <article class="card" id="portfolio">
-          <div class="card_header">
-            <span class="nivel">Nível: Iniciante</span>
-            <span class="status em_andamento">Em andamento</span>
+        <!-- PROJETO 1 -->
+        <div class="card-projeto">
+          <div class="status-projeto">
+            <span class="nivel">Iniciante</span>
+            <span class="status em-andamento">Em andamento</span>
           </div>
           <h3>Portfólio Pessoal</h3>
-          <p class="tech">HTML5, CSS3 & Layout Responsivo</p>
-          <a href="https://jmorais00.github.io/Portf-lio-Jayna/" target="_blank" rel="noopener noreferrer" class="btn_projeto">
-            Ver Projeto &rarr;
-          </a>
-        </article>
+          <p class="tecnologias">HTML, CSS & Responsividade</p>
+          <a href="https://jmorais00.github.io/Portf-lio-Jayna/" target="_blank" class="botao-link">Ver Projeto</a>
+        </div>
 
-        <!-- Card 2 -->
-        <article class="card" id="cartao">
-          <div class="card_header">
-            <span class="nivel">Nível: Iniciante</span>
-            <span class="status em_andamento">Em andamento</span>
+        <!-- PROJETO 2 -->
+        <div class="card-projeto">
+          <div class="status-projeto">
+            <span class="nivel">Iniciante</span>
+            <span class="status em-andamento">Em andamento</span>
           </div>
           <h3>Gerador de Cartão Digital</h3>
-          <p class="tech">HTML, CSS & JavaScript</p>
-          <a href="https://jmorais00.github.io/Gerador-de-Cartao-Digital/" target="_blank" rel="noopener noreferrer" class="btn_projeto">
-            Ver Projeto &rarr;
-          </a>
-        </article>
+          <p class="tecnologias">HTML, CSS & JavaScript</p>
+          <a href="https://jmorais00.github.io/Gerador-de-Cartao-Digital/" target="_blank" class="botao-link">Ver Projeto</a>
+        </div>
 
-        <!-- Card 3 -->
-        <article class="card roadmap" id="contrato">
-          <div class="card_header">
-            <span class="nivel">Iniciante Intermediário</span>
-            <span class="status nao_iniciado">Roadmap</span>
+        <!-- PROJETO 3 -->
+        <div class="card-projeto">
+          <div class="status-projeto">
+            <span class="nivel">Iniciante / Intermediário</span>
+            <span class="status em-breve">Em breve</span>
           </div>
           <h3>Gerador de Contratos</h3>
-          <p class="tech">Templates Dinâmicos & Lógica JS</p>
-          <span class="btn_projeto disabled">Em breve</span>
-        </article>
+          <p class="tecnologias">Templates Dinâmicos & Lógica JS</p>
+          <span class="botao-desativado">Em breve</span>
+        </div>
 
-        <!-- Card 4 -->
-        <article class="card roadmap" id="filmes">
-          <div class="card_header">
+        <!-- PROJETO 4 -->
+        <div class="card-projeto">
+          <div class="status-projeto">
             <span class="nivel">Intermediário</span>
-            <span class="status nao_iniciado">Roadmap</span>
+            <span class="status em-breve">Em breve</span>
           </div>
           <h3>Buscador de Filmes por Humor</h3>
-          <p class="tech">Consumo de API Externa com Async/Await</p>
-          <span class="btn_projeto disabled">Em breve</span>
-        </article>
+          <p class="tecnologias">Consumo de API com JavaScript</p>
+          <span class="botao-desativado">Em breve</span>
+        </div>
 
-        <!-- Card 5 -->
-        <article class="card roadmap" id="os">
-          <div class="card_header">
-            <span class="nivel">Intermediário Avançado</span>
-            <span class="status nao_iniciado">Roadmap (Backend)</span>
+        <!-- PROJETO 5 -->
+        <div class="card-projeto">
+          <div class="status-projeto">
+            <span class="nivel">Backend</span>
+            <span class="status em-breve">Em breve</span>
           </div>
           <h3>Sistema de Ordem de Serviço</h3>
-          <p class="tech">API Node.js, Express & Banco SQL</p>
-          <span class="btn_projeto disabled">Em breve</span>
-        </article>
+          <p class="tecnologias">Node.js, Express & Banco de Dados</p>
+          <span class="botao-desativado">Em breve</span>
+        </div>
 
-        <!-- Card 6 -->
-        <article class="card roadmap" id="agendamentos">
-          <div class="card_header">
-            <span class="nivel">Avançado</span>
-            <span class="status nao_iniciado">Roadmap (Full Stack)</span>
+        <!-- PROJETO 6 -->
+        <div class="card-projeto">
+          <div class="status-projeto">
+            <span class="nivel">Full Stack</span>
+            <span class="status em-breve">Em breve</span>
           </div>
           <h3>Plataforma de Agendamentos</h3>
-          <p class="tech">Full Stack + Autenticação JWT</p>
-          <span class="btn_projeto disabled">Em breve</span>
-        </article>
+          <p class="tecnologias">Node.js, Banco de Dados & Autenticação</p>
+          <span class="botao-desativado">Em breve</span>
+        </div>
 
-        <!-- Card 7 -->
-        <article class="card roadmap" id="crm">
-          <div class="card_header">
-            <span class="nivel">Expert</span>
-            <span class="status nao_iniciado">Projeto Final</span>
+        <!-- PROJETO 7 -->
+        <div class="card-projeto">
+          <div class="status-projeto">
+            <span class="nivel">Full Stack Avançado</span>
+            <span class="status em-breve">Em breve</span>
           </div>
           <h3>Painel Admin / CRM de Vendas</h3>
-          <p class="tech">Full Stack, CRUD Relacional, SQL & JWT</p>
-          <span class="btn_projeto disabled">Em breve</span>
-        </article>
+          <p class="tecnologias">Node.js, CRUD Completo & Autenticação</p>
+          <span class="botao-desativado">Em breve</span>
+        </div>
 
-      </div>
-    </section>
+      </div> <!-- Fim de .lista-projetos -->
+    </section> <!-- Fim de .secao-projetos -->
 
   </main>
 
   <!-- RODAPÉ -->
   <footer>
-    <div class="rodape">
-      <p class="direitos">Desenvolvido por Maria Jayna Morais Marques — Todos os direitos reservados.</p>
-    </div>
+    <p>Desenvolvido por Maria Jayna Morais Marques — Todos os direitos reservados.</p>
   </footer>
 
 </body>
