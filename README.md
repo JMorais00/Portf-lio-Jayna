@@ -53,6 +53,7 @@ O layout foi desenvolvido com o conceito de *Responsive Design* usando *Media Qu
 ├── style.css    # Regras de estilização e layout responsivo
 └── README.md    # Documentação do repositório
 
+---
 
 ## Como Rodar o Projeto Localmente
 
