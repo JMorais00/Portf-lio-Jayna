@@ -1,0 +1,473 @@
+/* ==========================================================================
+   1. VARIÁVEIS DE CORES DO TEMA PADRÃO (MODO CLARO)
+   O :root guarda as variáveis globais. Mudar a cor aqui altera no site todo!
+   ========================================================================== */
+:root {
+  /* Cores principais */
+  --cor-fundo: #f8fafc;            /* Cor do fundo da página */
+  --cor-card: #ffffff;             /* Cor do fundo dos cartões e cabeçalho */
+  --cor-texto-principal: #0f172a;  /* Cor dos títulos e textos de maior destaque */
+  --cor-texto-secundario: #475569; /* Cor dos subtítulos e descrições */
+  --cor-primaria: #2563eb;         /* Azul principal (botões e destaques) */
+  --cor-primaria-hover: #1d4ed8;   /* Azul mais escuro quando passa o rato */
+  --cor-borda: #e2e8f0;            /* Cor das linhas de divisão e bordas */
+
+  /* Cores internas de componentes */
+  --cor-destaque-bg: #f8fafc;      /* Fundo da caixa de destaque de formação */
+  --cor-badge-bg: #f1f5f9;         /* Fundo das tags e etiquetas */
+  --cor-badge-texto: #334155;      /* Cor do texto dentro das tags */
+
+  /* Cores para os estados dos projetos */
+  --cor-sucesso-bg: #dcfce7;
+  --cor-sucesso-texto: #15803d;
+  --cor-andamento-bg: #e0f2fe;
+  --cor-andamento-texto: #0369a1;
+  --cor-breve-bg: #f1f5f9;
+  --cor-breve-texto: #64748b;
+
+  /* Fontes, sombras e cantos arredondados */
+  --fonte-principal: 'Inter', system-ui, -apple-system, sans-serif;
+  --sombra-card: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  --sombra-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --raio-borda: 12px;
+}
+
+/* ==========================================================================
+   2. REGRAS DO MODO ESCURO (DARK MODE)
+   Quando a classe 'dark-mode' é adicionada ao body pelo JavaScript, 
+   sobrescrevemos apenas os valores das variáveis!
+   ========================================================================== */
+body.dark-mode {
+  --cor-fundo: #0b1120;            /* Fundo escuro */
+  --cor-card: #1e293b;             /* Cartões com tom escuro metálico */
+  --cor-texto-principal: #f8fafc;  /* Texto claro para facilitar a leitura */
+  --cor-texto-secundario: #94a3b8; /* Texto cinzento-claro */
+  --cor-primaria: #38bdf8;         /* Azul celeste mais vivo no modo escuro */
+  --cor-primaria-hover: #0284c7;   /* Tom de hover adaptado */
+  --cor-borda: #334155;            /* Bordas escuras mas visíveis */
+
+  --cor-destaque-bg: #0b1120;
+  --cor-badge-bg: #0b1120;
+  --cor-badge-texto: #38bdf8;
+
+  --cor-sucesso-bg: #14532d;
+  --cor-sucesso-texto: #4ade80;
+  --cor-andamento-bg: #0c4a6e;
+  --cor-andamento-texto: #38bdf8;
+  --cor-breve-bg: #334155;
+  --cor-breve-texto: #94a3b8;
+}
+
+/* ==========================================================================
+   3. RESET E ESTILOS BASE
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box faz com que o padding e a borda não aumentem
+     o tamanho total definido para os elementos */
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fonte-principal);
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto-principal);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /* Transição suave de 0.3 segundos ao alternar entre modo claro e escuro */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto; /* Centraliza a área principal na página */
+  padding: 0 20px 60px 20px;
+  width: 100%;
+}
+
+/* ==========================================================================
+   4. CABEÇALHO (TOPO DO SITE)
+   ========================================================================== */
+.cabecalho {
+  background-color: var(--cor-card);
+  border-bottom: 1px solid var(--cor-borda);
+  padding: 50px 20px 40px 20px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Foto de perfil redonda com borda temática */
+.foto-perfil {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;         /* Transforma a imagem num círculo perfeito */
+  object-fit: cover;           /* Evita que a imagem fique distorcida */
+  border: 4px solid var(--cor-primaria);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  margin-bottom: 16px;
+}
+
+.nome {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--cor-texto-principal);
+  margin-bottom: 6px;
+}
+
+.cargo {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--cor-primaria);
+  margin-bottom: 8px;
+}
+
+.localizacao {
+  font-size: 0.95rem;
+  color: var(--cor-texto-secundario);
+  margin-bottom: 20px;
+}
+
+/* Bloco dos balões de informação (CNPJ, Modalidade de trabalho, Carta de condução) */
+.container-badges {
+  display: flex;
+  flex-wrap: wrap;           /* Permite que os badges dobrem para a linha seguinte em ecrãs pequenos */
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.badge-info {
+  background-color: var(--cor-badge-bg);
+  color: var(--cor-badge-texto);
+  font-size: 0.825rem;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid var(--cor-borda);
+}
+
+/* Área dos botões (GitHub, LinkedIn, Contacto) */
+.botoes-redes {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.botao {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  background-color: var(--cor-card);
+  color: var(--cor-texto-principal);
+  border: 1px solid var(--cor-borda);
+  /* Animação suave para quando o rato passa por cima */
+  transition: all 0.2s ease;
+}
+
+.botao:hover {
+  border-color: var(--cor-primaria);
+  color: var(--cor-primaria);
+  transform: translateY(-2px); /* Eleva o botão ligeiramente */
+}
+
+/* Estilo do botão principal em destaque (Entrar em Contato) */
+.botao-destaque {
+  background-color: var(--cor-primaria);
+  color: #ffffff !important;   /* Força o texto a manter-se branco */
+  border: none;
+}
+
+.botao-destaque:hover {
+  background-color: var(--cor-primaria-hover);
+}
+
+.descricao {
+  font-size: 0.95rem;
+  color: var(--cor-texto-secundario);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   5. SEÇÃO DE ESPECIALIDADES E FORMAÇÃO
+   ========================================================================== */
+section {
+  margin-bottom: 50px;
+}
+
+section h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--cor-texto-principal);
+  margin-bottom: 8px;
+}
+
+.subtitulo-secao {
+  font-size: 0.95rem;
+  color: var(--cor-texto-secundario);
+  margin-bottom: 24px;
+}
+
+/* Alinhamento dos cartões de habilidades lado a lado utilizando CSS Grid */
+.grid-habilidades {
+  display: grid;
+  /* Cria colunas automáticas de no mínimo 320px */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.card-habilidade {
+  background-color: var(--cor-card);
+  padding: 24px;
+  border-radius: var(--raio-borda);
+  border: 1px solid var(--cor-borda);
+  box-shadow: var(--sombra-card);
+}
+
+.card-habilidade h3 {
+  font-size: 1.15rem;
+  margin-bottom: 2px;
+  color: var(--cor-texto-principal);
+}
+
+.nivel-subtitulo {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--cor-primaria);
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Destaque com linha lateral azul para as instituições de formação */
+.formacao-origem {
+  font-size: 0.9rem;
+  color: var(--cor-texto-principal);
+  margin-bottom: 6px;
+  background-color: var(--cor-destaque-bg);
+  padding: 6px 10px;
+  border-radius: 6px;
+  border-left: 3px solid var(--cor-primaria); /* Linha vertical à esquerda */
+}
+
+.detalhe-curso {
+  font-size: 0.88rem;
+  color: var(--cor-texto-secundario);
+  margin-bottom: 16px;
+}
+
+/* Tags de tecnologias (HTML5, CSS3, JS, Python, etc.) */
+.tags-tecnologias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  background-color: var(--cor-badge-bg);
+  color: var(--cor-badge-texto);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--cor-borda);
+}
+
+/* ==========================================================================
+   6. CARDS DE PROJETOS
+   ========================================================================== */
+.lista-projetos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 24px;
+}
+
+.card-projeto {
+  background-color: var(--cor-card);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-borda);
+  padding: 24px;
+  box-shadow: var(--sombra-card);
+  display: flex;
+  flex-direction: column;      /* Organiza os elementos do cartão na vertical */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-projeto:hover {
+  transform: translateY(-4px); /* Sobe o cartão ligeiramente quando passa o rato */
+  box-shadow: var(--sombra-hover);
+}
+
+.status-projeto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.nivel {
+  color: var(--cor-texto-secundario);
+}
+
+.status {
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+/* Cores condicionais dos estados dos projetos */
+.status.concluido {
+  background-color: var(--cor-sucesso-bg);
+  color: var(--cor-sucesso-texto);
+}
+
+.status.em-andamento {
+  background-color: var(--cor-andamento-bg);
+  color: var(--cor-andamento-texto);
+}
+
+.status.em-breve {
+  background-color: var(--cor-breve-bg);
+  color: var(--cor-breve-texto);
+}
+
+.card-projeto h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--cor-texto-principal);
+}
+
+.tecnologias {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--cor-primaria);
+  margin-bottom: 12px;
+}
+
+.descricao-curta {
+  font-size: 0.9rem;
+  color: var(--cor-texto-secundario);
+  margin-bottom: 20px;
+  flex-grow: 1;                 /* Empurra o botão do projeto sempre para o fundo do cartão */
+}
+
+.botao-link {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  background-color: var(--cor-primaria);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.botao-link:hover {
+  background-color: var(--cor-primaria-hover);
+}
+
+.botao-desativado {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  background-color: var(--cor-badge-bg);
+  color: var(--cor-texto-secundario);
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  cursor: not-allowed;         /* Mostra o cursor de "desativado/bloqueado" */
+}
+
+/* ==========================================================================
+   7. RODAPÉ (FOOTER)
+   ========================================================================== */
+.rodape {
+  margin-top: auto;            /* Mantém o rodapé colado ao fundo da página */
+  background-color: var(--cor-card);
+  border-top: 1px solid var(--cor-borda);
+  padding: 30px 20px;
+  text-align: center;
+  color: var(--cor-texto-secundario);
+  font-size: 0.9rem;
+}
+
+.subtexto-rodape {
+  font-size: 0.8rem;
+  margin-top: 6px;
+  color: var(--cor-texto-secundario);
+}
+
+/* ==========================================================================
+   8. BOTÃO FIXO DE TEMA (CANTO SUPERIOR DIREITO)
+   ========================================================================== */
+.btn-toggle-tema {
+  position: fixed;             /* Permanece no mesmo sítio mesmo com a página a rolar */
+  top: 16px;
+  right: 16px;
+  z-index: 1000;              /* Garante que o botão fica acima de qualquer outro elemento */
+  background-color: var(--cor-card);
+  color: var(--cor-texto-principal);
+  border: 1px solid var(--cor-borda);
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+}
+
+.btn-toggle-tema:hover {
+  border-color: var(--cor-primaria);
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   9. RESPONSIVIDADE (MEDIA QUERIES PARA DISPOSITIVOS MÓVEIS)
+   ========================================================================== */
+@media (max-width: 640px) {
+  .cabecalho {
+    padding: 30px 15px 25px 15px;
+  }
+
+  .nome {
+    font-size: 1.5rem;
+  }
+
+  .cargo {
+    font-size: 0.95rem;
+  }
+
+  .card-habilidade {
+    padding: 20px;
+  }
+
+  /* Em telemóveis, a lista de projetos passa a ser de 1 única coluna */
+  .lista-projetos {
+    grid-template-columns: 1fr;
+  }
+
+  /* Oculta o texto do botão de tema em ecrãs pequenos para poupar espaço */
+  .texto-btn-tema {
+    display: none;
+  }
+
+  .btn-toggle-tema {
+    padding: 8px 10px;
+  }
+}

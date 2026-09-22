@@ -1,0 +1,261 @@
+<!-- DOCTYPE: Informa ao navegador que este documento utiliza a especificação moderna do HTML5 -->
+<!DOCTYPE html>
+
+<!-- HTML: Elemento raiz que envolve todo o documento. O lang="pt-BR" orienta motores de busca e leitores de ecrã -->
+<html lang="pt-BR">
+
+<head>
+  <!-- UTF-8: Codificação universal de caracteres (suporta ç, acentos e emojis sem quebrar) -->
+  <meta charset="UTF-8">
+
+  <!-- VIEWPORT: Ajusta a escala da página para a largura da tela do dispositivo (responsividade em mobile/tablet) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- TITLE: Texto que aparece na aba do navegador e no título das pesquisas do Google -->
+  <title>Portfólio - Maria Jayna | Dev Full Stack & Data Science</title>
+
+  <!-- PRECONNECT: Pré-conecta aos servidores de fontes da Google para otimizar o tempo de carregamento da página -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- LINK CSS: Vincula o ficheiro de estilos externos (style.css) ao HTML -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HEADER: Representa o cabeçalho principal da página com a introdução pessoal -->
+  <header class="cabecalho">
+
+    <!-- FOTO DE PERFIL: Contém atributo 'alt' detalhado exigido pelas diretrizes de acessibilidade (WCAG) -->
+    <img 
+      src="https://media.licdn.com/dms/image/v2/D4D03AQHaBcl1D6Prug/profile-displayphoto-scale_400_400/B4DZ_NVrzSGYAo-/0/1785856442185?e=2147483647&v=beta&t=F4IAO2mXNapyo9uZpA4fuKz1ChKsrQSkV_OdFI1RfH8" 
+      alt="Foto de perfil de Maria Jayna Morais Marques" 
+      class="foto-perfil"
+    >
+
+    <!-- H1: Título principal (deve existir apenas um h1 por página para uma boa estrutura de SEO) -->
+    <h1 class="nome">Maria Jayna Morais Marques</h1>
+
+    <!-- Subtítulos e informações de localização -->
+    <p class="cargo">Desenvolvedora Full Stack & Júnior em Ciência de Dados</p>
+    <p class="localizacao">📍 Fortaleza - CE | CNH Categoria A e B</p>
+
+    <!-- CONTAINER BADGES: Agrupa balões com informações contratuais -->
+    <div class="container-badges">
+      <span class="badge-info">CNPJ Ativo (Emissão de NF) - Prestadora de Serviços (PJ)</span>
+      <span class="badge-info">Disponível para CLT/PJ com Atuação 100% Remota ou Híbrida</span>
+    </div>
+
+    <!-- BOTOES DE REDES: Links com target="_blank" para abrir em nova aba e rel="noopener noreferrer" por segurança -->
+    <div class="botoes-redes">
+      <a href="https://github.com/JMorais00" target="_blank" rel="noopener noreferrer" class="botao">GitHub</a>
+      <a href="https://www.linkedin.com/in/maria-jayna-m-9949a110b" target="_blank" rel="noopener noreferrer" class="botao">LinkedIn</a>
+      <a href="mailto:jaynamorais9@gmail.com" class="botao botao-destaque">Entrar em Contato</a>
+    </div>
+
+    <!-- Breve resumo/introdução da página -->
+    <p class="descricao">Seja bem-vindo(a)! Confira abaixo as minhas especialidades, formações e projetos organizados do nível iniciante ao avançado.</p>
+  </header>
+
+  <!-- MAIN: Abriga o conteúdo de valor principal e exclusivo do site -->
+  <main>
+
+    <!-- SECTION 1: Seção focada em competências técnicas e formação acadêmica -->
+    <section class="secao-habilidades">
+      <h2>Especialidades, Formação & Tecnologias</h2>
+      <p class="subtitulo-secao">Pilares técnicos de atuação em Desenvolvimento Web e Ciência de Dados</p>
+
+      <div class="grid-habilidades">
+
+        <!-- CARD HABILIDADE 1: Bloco focado em Web Dev -->
+        <div class="card-habilidade">
+          <h3>💻 Desenvolvimento Web & Full Stack</h3>
+          <p class="nivel-subtitulo">Nível: Júnior em transição para Intermediário</p>
+          <p class="formacao-origem">🎓 <strong>Formação Desenvolvedor Full Stack (192h)</strong> — IEL / FIEC</p>
+          <p class="detalhe-curso">Criação de interfaces web, aplicações completas e testes. Módulos: Fundamentos Web, Front-End em JavaScript/ReactJS, Back-End (Node.js/Express.js/Bancos de Dados) e Testes Automatizados (Cypress).</p>
+
+          <div class="tags-tecnologias">
+            <span class="tag">HTML5</span>
+            <span class="tag">CSS3</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">ReactJS</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">Express.js</span>
+            <span class="tag">Banco de Dados</span>
+            <span class="tag">Cypress</span>
+            <span class="tag">WordPress</span>
+            <span class="tag">Git & GitHub</span>
+          </div>
+        </div>
+
+        <!-- CARD HABILIDADE 2: Bloco focado em Data Science -->
+        <div class="card-habilidade">
+          <h3>📊 Ciência de Dados & Analytics</h3>
+          <p class="nivel-subtitulo">Nível: Júnior</p>
+          <p class="formacao-origem">🎓 <strong>Formação em Ciência de Dados (400h)</strong> — SENAI</p>
+          <p class="detalhe-curso">Fundamentos de TIC, Python, Machine Learning e Visão Computacional aplicados à análise de dados, Indústria 4.0 e processos industriais.</p>
+
+          <div class="tags-tecnologias">
+            <span class="tag">Python</span>
+            <span class="tag">Data Science</span>
+            <span class="tag">Machine Learning</span>
+            <span class="tag">Visão Computacional</span>
+            <span class="tag">Indústria 4.0</span>
+            <span class="tag">Git</span>
+            <span class="tag">GitHub</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 2: Seção reservada para os projetos do portfólio -->
+    <section class="secao-projetos">
+      <h2>Meus Projetos</h2>
+      <p class="subtitulo-secao">Projetos práticos organizados do nível iniciante ao avançado</p>
+
+      <div class="lista-projetos">
+
+        <!-- ARTICLE: Usado em cada projeto pois representam conteúdos independentes e autocontidos -->
+        <article class="card-projeto">
+          <div class="status-projeto">
+            <span class="nivel">Iniciante</span>
+            <span class="status em-andamento">Em andamento</span>
+          </div>
+          <h3>Portfólio Pessoal</h3>
+          <p class="tecnologias">HTML, CSS & Responsividade</p>
+          <p class="descricao-curta">Estrutura e apresentação pessoal desenvolvida do zero para exibição de projetos e contato.</p>
+          <a href="https://jmorais00.github.io/Portf-lio-Jayna/" target="_blank" rel="noopener noreferrer" class="botao-link">Ver Projeto</a>
+        </article>
+
+        <!-- PROJETO 2 -->
+        <article class="card-projeto">
+          <div class="status-projeto">
+            <span class="nivel">Iniciante</span>
+            <span class="status concluido">Concluído</span>
+          </div>
+          <h3>Gerador de Cartão Digital</h3>
+          <p class="tecnologias">HTML, CSS & JavaScript</p>
+          <p class="descricao-curta">Aplicação web interativa para criação rápida de cartões digitais com manipulação dinâmica via JS.</p>
+          <a href="https://jmorais00.github.io/Gerador-de-Cartao-Digital/" target="_blank" rel="noopener noreferrer" class="botao-link">Ver Projeto</a>
+        </article>
+
+        <!-- PROJETO 3 (EM BREVE: Usa <span> em vez de <a> por não ser um link ativo) -->
+        <article class="card-projeto">
+          <div class="status-projeto">
+            <span class="nivel">Iniciante</span>
+            <span class="status concluido">Concluído</span>
+          </div>
+          <h3>Dashboard Energético (ONS)</h3>
+          <p class="tecnologias">Python • Pandas • Streamlit • Plotly</p>
+          <p class="descricao-curta">Análise e visualização da eficiência da geração de energia no Brasil a partir de dados abertos do ONS.</p>
+          <a href="https://dashboard-ons-hvk4jz52bw7kqvbgvn77u5.streamlit.app/" target="_blank" rel="noopener noreferrer" class="botao-link">Ver Projeto</a>
+        </article>
+
+        <!-- PROJETO 4 -->
+        <article class="card-projeto">
+          <div class="status-projeto">
+            <span class="nivel">Iniciante / Intermediário</span>
+            <span class="status concluido">Concluído</span>
+          </div>
+          <h3>Site para Taylor Advocacia (Cliente)</h3>
+          <p class="tecnologias">WordPress, CMS & Design Responsivo</p>
+          <p class="descricao-curta">Site institucional desenvolvido sob medida. <em>(Hospedado no subdomínio gratuito a pedido do cliente) Projeto de 4 horas</em>.</p>
+          <a href="https://tayloradvocacia.wordpress.com/" target="_blank" rel="noopener noreferrer" class="botao-link">Ver Projeto</a>
+        </article>
+
+        <!-- PROJETO 5 -->
+        <article class="card-projeto">
+          <div class="status-projeto">
+            <span class="nivel">Iniciante / Intermediário</span>
+            <span class="status em-breve">Em breve</span>
+          </div>
+          <h3>Gerador de Contratos</h3>
+          <p class="tecnologias">Templates Dinâmicos & Lógica JS</p>
+          <p class="descricao-curta">Ferramenta para automação na geração de documentos através de formulários inteligentes.</p>
+          <span class="botao-desativado">Em breve</span>
+        </article>
+
+        <!-- PROJETO 6 -->
+        <article class="card-projeto">
+          <div class="status-projeto">
+            <span class="nivel">Intermediário</span>
+            <span class="status em-breve">Em breve</span>
+          </div>
+          <h3>Previsão de Risco em Frotas</h3>
+          <p class="tecnologias">Python • Scikit-Learn • FastAPI • NumPy</p>
+          <p class="descricao-curta">Modelo de Machine Learning para prever atrasos e falhas operacionais no transporte público.</p>
+          <span class="botao-desativado">Em breve</span>
+        </article>
+
+        <!-- PROJETO 7 -->
+        <article class="card-projeto">
+          <div class="status-projeto">
+            <span class="nivel">Backend / Intermediário</span>
+            <span class="status em-breve">Em breve</span>
+          </div>
+          <h3>Sistema de Ordem de Serviço</h3>
+          <p class="tecnologias">Node.js, Express & Banco de Dados SQL</p>
+          <p class="descricao-curta">Sistema para abertura, gerenciamento e acompanhamento de chamados técnicos e ordens de serviço.</p>
+          <span class="botao-desativado">Em breve</span>
+        </article>
+
+        <!-- PROJETO 8 -->
+        <article class="card-projeto">
+          <div class="status-projeto">
+            <span class="nivel">Full Stack Intermediário</span>
+            <span class="status em-breve">Em breve</span>
+          </div>
+          <h3>Plataforma de Agendamentos</h3>
+          <p class="tecnologias">Node.js, Banco de Dados & Autenticação</p>
+          <p class="descricao-curta">Solução Full Stack com controle de horários, usuários autenticados e persistência de dados.</p>
+          <span class="botao-desativado">Em breve</span>
+        </article>
+
+        <!-- PROJETO 9 -->
+        <article class="card-projeto">
+          <div class="status-projeto">
+            <span class="nivel">Full Stack Avançado</span>
+            <span class="status em-breve">Em breve</span>
+          </div>
+          <h3>Painel Admin / CRM de Vendas</h3>
+          <p class="tecnologias">Node.js, CRUD Completo & Autenticação</p>
+          <p class="descricao-curta">Painel administrativo com relatórios, gerenciamento de clientes e controle de acessos corporativos.</p>
+          <span class="botao-desativado">Em breve</span>
+        </article>
+
+        <!-- PROJETO 10 -->
+        <article class="card-projeto">
+          <div class="status-projeto">
+            <span class="nivel">Avançado</span>
+            <span class="status em-breve">Em breve</span>
+          </div>
+          <h3>Inspeção Industrial de Qualidade</h3>
+          <p class="tecnologias">Python • OpenCV • YOLO / PyTorch • Streamlit</p>
+          <p class="descricao-curta">Sistema de Visão Computacional para detecção automática de defeitos em peças metálicas (MVTec AD).</p>
+          <span class="botao-desativado">Em breve</span>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER: Rodapé com direitos de autor e notas finais -->
+  <footer class="rodape">
+    <p>Desenvolvido por Maria Jayna Morais Marques — Todos os direitos reservados.</p>
+    <p class="subtexto-rodape">Programadora Full Stack & Data Science</p>
+  </footer>
+
+  <!-- BOTÃO FIXO DE TEMA: Utiliza aria-label para ser lido corretamente por tecnologias assistivas -->
+  <button id="toggle-theme" class="btn-toggle-tema" aria-label="Alternar modo de tema">
+    <span class="texto-btn-tema">Modo Escuro</span>
+  </button>
+
+  <!-- SCRIPT JS: Inserido imediatamente antes do fecho do body para não bloquear a renderização inicial do HTML -->
+  <script src="script.js"></script>
+
+</body>
+</html>
